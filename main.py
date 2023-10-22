@@ -79,12 +79,11 @@ for column1 in dfNew.columns:
     for column2 in dfNew.columns:
         correlation = correlation_matrix[column1][column2]
         status = ""
-        if correlation > 0:
+        if correlation > 0 :
             status = "positive"
         elif correlation < 0:
             status = "negative"
-        else:
-            status = "-"
+        
         print(
             f"Correlation between {column1} and {column2}: {correlation_matrix[column1][column2]:.2f} ({status} correlation)")
         print("")
